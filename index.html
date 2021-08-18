@@ -9,14 +9,19 @@
   <title>Tip calculator app | Frontend Mentor</title>
 </head>
 <body>
-  <h1 class="logo">Spli<br>tter</h1>
+  <img src="./images/logo.svg" alt="SPLITTER" class="logo">
+
+
   <main class="calc">
     <section class="calc__form">
       <div class="calc__form__data">
         <h2 class="calc__form__data__title">
           Bill
         </h2>
-        <input type="number" name="bill" id="bill" class="calc__form__data__input">  
+        <span>
+          <img src="./images/icon-dollar.svg" alt="$">
+        </span>
+        <input type="number" name="bill" id="bill" class="calc__form__data__input" min="0">  
       </div>
       <div class="calc__form__data">
         <h2 class="calc__form__data__title">
@@ -28,14 +33,19 @@
           <button>%15</button>
           <button>%25</button>
           <button>%50</button>
-          <input type="number" name="custom" id="custom" placeholder="Custom">
+          <input type="number" name="custom" id="custom" placeholder="Custom" 
+          min="0" max="100" step="1">
         </div>
       </div>
       <div class="calc__form__data">
         <h2 class="calc__form__data__title">
           Number of People
         </h2>
-        <input type="text" name="people" id="people" class="calc__form__data__input">
+        <span>
+          <img src="./images/icon-person.svg" alt="$">
+        </span>
+        <input type="number" name="people" id="people" class="calc__form__data__input"
+        min="0" max="100" step="1">
       </div>
     </section>
     <section class="calc__results">
@@ -48,7 +58,7 @@
             / person
           </div>
           <div class="calc__results__figure__amount">
-            $74.70
+            $174.70
           </div>
         </div>
         <div class="calc__results__figure">

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+button, input {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+.logo {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: #00494d;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.calc {
+  display: flex;
+  flex-direction: row;
+  min-height: 50vh;
+  margin: 1rem 3rem 3rem 3rem;
+  background-color: white;
+  border: none;
+  border-radius: 1.6rem;
+  box-shadow: 0px 0px 3rem rgba(0, 0, 0, 0.2);
+}
+.calc__form {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.calc__form__data__title {
+  font-size: 1.2rem;
+  color: #969696;
+  margin-bottom: 0.5rem;
+}
+.calc__form__data__input {
+  width: 100%;
+  border: none;
+  background: #f4fafa;
+  padding: 0.3rem;
+  font-weight: 700;
+  color: #00494d;
+}
+.calc__form__data__btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.calc__form__data__btns button {
+  background-color: #00494d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+.calc__form__data__btns button:active, .calc__form__data__btns button:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.calc__form__data__btns input {
+  width: 100%;
+  background-color: #f4fafa;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #969696;
+  text-align: center;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+.calc__form__data__btns ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #969696;
+}
+.calc__form__data__btns ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #969696;
+}
+.calc__form__data__btns :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #969696;
+}
+.calc__form__data__btns :-moz-placeholder {
+  /* Firefox 18- */
+  color: #969696;
+}
+.calc__results {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5rem;
+  padding: 2rem;
+  background-color: #00494d;
+  border: none;
+  border-radius: 1.2rem;
+}
+.calc__results__figure {
+  color: #7f9c9f;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.calc__results__figure__description__title {
+  font-size: 1.2rem;
+  color: #f4fafa;
+  margin-bottom: 0.3rem;
+}
+.calc__results__figure__amount {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.calc__results__btn {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 3.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+/*# sourceMappingURL=style.css.map */

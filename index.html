@@ -3,42 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src="./tip-calc.js" defer></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./style.css">
+  <title>Tip calculator app | Frontend Mentor</title>
 </head>
 <body>
+  <h1 class="logo">Spli<br>tter</h1>
+  <main class="calc">
+    <section class="calc__form">
+      <div class="calc__form__data">
+        <h2 class="calc__form__data__title">
+          Bill
+        </h2>
+        <input type="number" name="bill" id="bill" class="calc__form__data__input">  
+      </div>
+      <div class="calc__form__data">
+        <h2 class="calc__form__data__title">
+          Select Tip %
+        </h2>
+        <div class="calc__form__data__btns">
+          <button>%5</button>
+          <button>%10</button>
+          <button>%15</button>
+          <button>%25</button>
+          <button>%50</button>
+          <input type="number" name="custom" id="custom" placeholder="Custom">
+        </div>
+      </div>
+      <div class="calc__form__data">
+        <h2 class="calc__form__data__title">
+          Number of People
+        </h2>
+        <input type="text" name="people" id="people" class="calc__form__data__input">
+      </div>
+    </section>
+    <section class="calc__results">
+      <div>
+        <div class="calc__results__figure">
+          <div class="calc__resutls__figure__description">
+            <h2 class="calc__results__figure__description__title">
+              Tip Amount
+            </h2>
+            / person
+          </div>
+          <div class="calc__results__figure__amount">
+            $74.70
+          </div>
+        </div>
+        <div class="calc__results__figure">
+          <div class="calc__resutls__figure__description">
+            <h2 class="calc__results__figure__description__title">
+              Total
+            </h2>
+            / person
+          </div>
+          <div class="calc__results__figure__amount">
+            $74.70
+          </div>
+        </div>
+      </div>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <button class="calc__results__btn">reset</button>
+    </section>
+  </main>
 </body>
 </html>

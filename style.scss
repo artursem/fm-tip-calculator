@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $color;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $color;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $color;
+      }
+}
+
+$strong: hsl(172, 67%, 45%);
+$c100: hsl(183, 100%, 15%);
+$c80: hsl(0, 0%, 59%);
+$c60: hsl(184, 14%, 56%);
+$c40: hsl(185, 41%, 84%);
+$c20: hsl(189, 41%, 97%);
+$c0: hsl(0, 0%, 100%);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div, section {
+    // border: 1px dashed orangered;
+}
+
+
+body {
+    background: $c40;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+button, input {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+.logo {
+    margin-top: 5rem; // ############ desktop
+    margin-bottom: 5rem; // ############ desktop
+    color: $c100;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+}
+
+.calc {
+    display: flex;
+    flex-direction: row; // ############ desktop 
+    min-height: 50vh;   // ############ desktop 
+    margin: 1rem 3rem 3rem 3rem;
+    background-color: $c0; 
+
+    border: none;
+    border-radius: 1.6rem;
+
+    box-shadow: 0px 0px 3rem rgba(0,0,0,.2);
+    &__form{
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        &__data {
+            &__title {
+                font-size: 1.2rem;
+                color: $c80;
+                margin-bottom: 0.5rem;
+            }
+            &__input {
+                width: 100%;
+                border: none;
+                background: $c20;
+                
+                padding: .3rem;
+                font-weight: 700;
+                color: $c100;
+            }
+            &__btns {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                
+                button {
+                    background-color: $c100;
+                    color: $c0;
+                    border: none;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    padding: .2rem;
+                    margin: .3rem;
+                    cursor: pointer;
+                }
+                button:active, button:hover {
+                    background-color: $strong;
+                    color: $c100;
+                }
+                
+                input {
+                    width: 100%;
+                    background-color: $c20;
+                    border: none;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    color: $c80;
+                    text-align: center;
+                    
+                    padding: .2rem;
+                    cursor: pointer;
+                }
+                @include placeholder(hsl(0, 0%, 59%));
+            }
+        }
+    }
+    
+    &__results {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        margin: 1.5rem;
+        padding: 2rem;
+        
+        background-color: $c100;
+        border: none;
+        border-radius: 1.2rem;
+
+        &__figure {
+            color: $c60;
+            font-size: 1rem;
+            font-weight: 700;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            margin-bottom: 1rem;
+            &__description {
+                &__title {
+                    font-size: 1.2rem;
+                    color: $c20;
+                    margin-bottom: 0.3rem;
+                }   
+            }
+            &__amount {
+                color: $strong;
+                font-weight: 700;
+                font-size: 3rem;
+            }
+        }
+        &__btn {
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 3.2rem;
+
+            border: none;
+            border-radius: .3rem;
+            background-color: $strong;
+            color: $c100;
+        }
+    }
+}
+

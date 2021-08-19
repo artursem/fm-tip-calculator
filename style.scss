@@ -22,7 +22,7 @@ $c60: hsl(184, 14%, 56%);
 $c40: hsl(185, 41%, 84%);
 $c20: hsl(189, 41%, 97%);
 $c0: hsl(0, 0%, 100%);
-
+$red: hsl(0, 90%, 40%);
 
 * {
     padding: 0;
@@ -81,11 +81,21 @@ button, input {
         justify-content: space-between;
         align-items: stretch;
         &__data {
+            &__top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
             &__title {
                 font-size: .7rem;
                 color: $c80;
                 margin-bottom: 0.3rem;
-                
+            }
+            .hide {
+                display: none;
+            }
+            h2.error {
+                color: $red;
             }
             &__input {
                 width: 100%;
@@ -104,6 +114,9 @@ button, input {
                 border: solid 2px $strong;
 
                 outline: none;
+            }
+            input.error {
+                border: 2px solid $red;
             }
             img {
                 min-width: 1rem;

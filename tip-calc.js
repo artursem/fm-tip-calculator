@@ -5,6 +5,7 @@ const inputPeople = document.querySelector('#people');
 const domResultTip = document.querySelector('#tip-amount');
 const domResultTotal = document.querySelector('#total');
 const resetBtn = document.querySelector('#reset');
+const errorMessage = document.querySelector('#error-message');
 
 const currentBill = {
     people: 1,
@@ -43,6 +44,18 @@ function reset() {
     // $0.00
     showResult(0.00, 0.00);
 }
+
+function showError() {
+    errorMessage.classList.remove('hide');
+    inputPeople.classList.add('error');
+}
+
+function hideError() {
+    errorMessage.classList.add('hide');
+    inputPeople.classList.remove('error');
+}
+
+
  
 inputBill.addEventListener('input', (e) => {
     currentBill.bill = e.target.value; 
@@ -60,8 +73,14 @@ inputTipCustom.addEventListener('input', (e) => {
 })
 
 inputPeople.addEventListener('input', (e) => {
-    currentBill.people = e.target.value; 
-    calculate(currentBill);
+    if(e.target.value == 0) {
+        showError();
+        return;
+    } else {
+        hideError();
+        currentBill.people = e.target.value; 
+        calculate(currentBill);
+    }
 });
 
 resetBtn.addEventListener('click', reset);

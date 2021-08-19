@@ -21,7 +21,8 @@
         <span>
           <img src="./images/icon-dollar.svg" alt="$">
         </span>
-        <input type="number" name="bill" id="bill" class="calc__form__data__input" min="0">  
+        <input type="number" name="bill" id="bill" class="calc__form__data__input"
+         min="0" placeholder="0">  
       </div>
       <div class="calc__form__data">
         <h2 class="calc__form__data__title">
@@ -38,9 +39,15 @@
         </div>
       </div>
       <div class="calc__form__data">
-        <h2 class="calc__form__data__title">
-          Number of People
-        </h2>
+        <div class="calc__form__data__top">
+          <h2 class="calc__form__data__title">
+            Number of People
+          </h2>
+          <h2 class="calc__form__data__title hide error" id="error-message">
+            Can't be zero
+          </h2>
+        </div>
+
         <span>
           <img src="./images/icon-person.svg" alt="$">
         </span>

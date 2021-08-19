@@ -46,10 +46,21 @@ button, input {
   justify-content: space-between;
   align-items: stretch;
 }
+.calc__form__data__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .calc__form__data__title {
   font-size: 0.7rem;
   color: #969696;
   margin-bottom: 0.3rem;
+}
+.calc__form__data .hide {
+  display: none;
+}
+.calc__form__data h2.error {
+  color: #c20a0a;
 }
 .calc__form__data__input {
   width: 100%;
@@ -65,6 +76,9 @@ button, input {
 .calc__form__data__input:focus {
   border: solid 2px #26c0ab;
   outline: none;
+}
+.calc__form__data input.error {
+  border: 2px solid #c20a0a;
 }
 .calc__form__data img {
   min-width: 1rem;

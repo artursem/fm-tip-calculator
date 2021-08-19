@@ -102,7 +102,6 @@ button, input {
                 border: none;
                 background: $c20;
                 border-radius: 5px;
-
                 padding: .3rem;
                 font-weight: 700;
                 color: $c100;
@@ -142,7 +141,10 @@ button, input {
                     background-color: $c40;
                     color: $c100;
                 }
-                
+                .selected {
+                    background-color: $strong;
+                    color: $c100;
+                }
                 input {
                     width: 100%;
                     background-color: $c20;

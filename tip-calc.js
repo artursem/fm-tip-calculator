@@ -37,6 +37,9 @@ function reset() {
     currentBill.total = 0.00;
     delete currentBill.tipPercent;
     delete currentBill.bill;
+    // clear tip inputs
+    inputTipCustom.classList.remove('selected');
+    inputTipPercent.forEach(btn => btn.classList.remove('selected'));
     // clear inputs
     inputBill.value = "";
     inputTipCustom.value = "";
@@ -55,22 +58,30 @@ function hideError() {
     inputPeople.classList.remove('error');
 }
 
+function enterTip(e) {
+    inputTipCustom.classList.remove('selected');
+    inputTipPercent.forEach(btn => btn.classList.remove('selected'));
+    this.classList.add('selected');
 
+    if(e.target.id === 'tipbtn') {
+        currentBill.tipPercent = e.target.dataset.tip / 100;
+        console.log(currentBill.tipPercent);
+    } else if(e.target.id === 'custom') {
+        currentBill.tipPercent = e.target.value / 100;
+        console.log(currentBill.tipPercent);
+    }
+    calculate(currentBill);
+}
  
+
+inputTipPercent.forEach(btn => btn.addEventListener('click', enterTip));
+
+inputTipCustom.addEventListener('input', enterTip);
+
 inputBill.addEventListener('input', (e) => {
     currentBill.bill = e.target.value; 
     calculate(currentBill);
 });
-
-inputTipPercent.forEach(btn => btn.addEventListener('click', function(e) {
-    currentBill.tipPercent = e.target.dataset.tip;
-    calculate(currentBill);
-}));
-
-inputTipCustom.addEventListener('input', (e) => {
-    currentBill.tipPercent = e.target.value / 100;
-    calculate(currentBill);
-})
 
 inputPeople.addEventListener('input', (e) => {
     if(e.target.value == 0) {

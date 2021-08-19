@@ -104,6 +104,10 @@ button, input {
   background-color: #c5e4e7;
   color: #00494d;
 }
+.calc__form__data__btns .selected {
+  background-color: #26c0ab;
+  color: #00494d;
+}
 .calc__form__data__btns input {
   width: 100%;
   background-color: #f4fafa;

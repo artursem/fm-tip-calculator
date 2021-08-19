@@ -28,11 +28,11 @@
           Select Tip %
         </h2>
         <div class="calc__form__data__btns">
-          <button>%5</button>
-          <button>%10</button>
-          <button>%15</button>
-          <button>%25</button>
-          <button>%50</button>
+          <button class="tip-percent" data-tip="0.05">%5</button>
+          <button class="tip-percent" data-tip="0.10">%10</button>
+          <button class="tip-percent" data-tip="0.15">%15</button>
+          <button class="tip-percent" data-tip="0.25">%25</button>
+          <button class="tip-percent" data-tip="0.50">%50</button>
           <input type="number" name="custom" id="custom" placeholder="Custom" 
           min="0" max="100" step="1">
         </div>
@@ -45,7 +45,7 @@
           <img src="./images/icon-person.svg" alt="$">
         </span>
         <input type="number" name="people" id="people" class="calc__form__data__input"
-        min="0" max="100" step="1">
+        min="0" max="100" step="1" placeholder="1">
       </div>
     </section>
     <section class="calc__results">
@@ -57,8 +57,8 @@
             </h2>
             / person
           </div>
-          <div class="calc__results__figure__amount">
-            $174.70
+          <div class="calc__results__figure__amount" id="tip-amount">
+            $0.00
           </div>
         </div>
         <div class="calc__results__figure">
@@ -68,13 +68,13 @@
             </h2>
             / person
           </div>
-          <div class="calc__results__figure__amount">
-            $74.70
+          <div class="calc__results__figure__amount" id="total">
+            $0.00
           </div>
         </div>
       </div>
 
-      <button class="calc__results__btn">reset</button>
+      <button class="calc__results__btn" id="reset">reset</button>
     </section>
   </main>
 </body>
